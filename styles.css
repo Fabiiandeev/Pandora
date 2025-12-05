@@ -1,0 +1,192 @@
+/* Estilos gerais */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+h1, h2 {
+  color: #f07cb6;
+}
+
+h3 {
+  color: #333;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Cabeçalho */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.logo {
+  width: 120px;
+}
+
+.promo-banner {
+  background-color: #f07cb6;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #f07cb6;
+}
+
+/* Hero Section */
+.hero {
+  background-color: #f8f0f7;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.hero-img {
+  max-width: 100%;
+  height: auto;
+}
+
+.hero-content h1 {
+  color: #f07cb6;
+}
+
+.hero-text {
+  font-size: 20px;
+  margin-top: 10px;
+  color: #333;
+}
+
+.btn-primary {
+  background-color: #f07cb6;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background 0.3s;
+  margin-top: 20px;
+}
+
+.btn-primary:hover {
+  background-color: #e06c99;
+}
+
+/* Card de Produto */
+.product-card {
+  background-color: #fff;
+  padding: 50px;
+  text-align: center;
+}
+
+.product-card h2 {
+  color: #f07cb6;
+}
+
+.product-card-content {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.product-card-left {
+  margin-right: 30px;
+}
+
+.product-card-right {
+  max-width: 500px;
+}
+
+.de {
+  text-decoration: line-through;
+  color: #888;
+  margin-right: 10px;
+}
+
+.por {
+  font-size: 24px;
+  color: #f07cb6;
+  font-weight: bold;
+}
+
+.bonus {
+  font-size: 18px;
+  color: #333;
+  margin-top: 10px;
+}
+
+/* Benefícios */
+.beneficios {
+  background-color: #f8f0f7;
+  padding: 50px;
+  text-align: center;
+}
+
+.beneficios ul {
+  list-style: none;
+  padding: 0;
+}
+
+.beneficios li {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+/* Depoimentos */
+.reviews {
+  background-color: #fff;
+  padding: 50px;
+  text-align: center;
+}
+
+.reviews-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.review {
+  max-width: 300px;
+  font-style: italic;
+}
+
+.review strong {
+  color: #f07cb6;
+}
+
+/* Garantia */
+.garantia {
+  background-color: #f8f0f7;
+  padding: 50px;
+  text-align:

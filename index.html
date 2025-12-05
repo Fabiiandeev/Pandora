@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pandora | Pulseira Elegance</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Roboto:wght@300;400;700&display=swap"
+    rel="stylesheet">
+
+  <style>
+    /* --- RESET --- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary-black: #111;
+      --pandora-pink: #ffcce0;
+      --font-serif: 'Playfair Display', serif;
+      --font-sans: 'Roboto', sans-serif;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      color: var(--primary-black);
+      background-color: #fff;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    /* =========================================
+       SEÇÃO 1: TOPO EDITORIAL
+       ========================================= */
+
+    .top-bar {
+      background-color: var(--primary-black);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 15px 0;
+    }
+
+    .logo-img {
+      height: 40px;
+      width: auto;
+      margin-bottom: 10px;
+      filter: invert(1);
+    }
+
+    .sub-nav {
+      font-size: 0.75rem;
+      color: #ccc;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .sub-nav span {
+      margin: 0 10px;
+      cursor: pointer;
+    }
+
+    /* CONTAINER PRINCIPAL */
+.editorial-hero {
+  position: relative;
+  width: 100%;
+  height: 80vh; 
+  overflow: hidden;
+  background: #000;
+  /* NOVO: Centraliza o conteúdo se houver mais de um item no hero */
+  display: flex; 
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+}
+
+/* IMAGEM */
+.editorial-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  opacity: 0.8;
+  /* Garantindo que o ponto focal da imagem esteja no centro */
+  object-position: center; 
+}
+
+/* TEXTO DE SOBREPOSIÇÃO */
+.hero-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* ALTERADO: Usa o translate para centralização precisa */
+  transform: translate(-50%, -50%); 
+  text-align: center; /* Centraliza o texto dentro do overlay */
+  color: #fff;
+  width: 90%;
+  max-width: 600px;
+}
+    
+
+    
+
+    
+
+    .hero-title {
+      font-family: var(--font-serif);
+      font-size: 3rem;
+      line-height: 1.2;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+
+    .hero-text {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+      font-weight: 300;
+    }
+
+    .btn-editorial {
+      border: 1px solid #fff;
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      padding: 15px 40px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: 0.3s;
+      backdrop-filter: blur(5px);
+    }
+
+    .btn-editorial:hover {
+      background: #fff;
+      color: #000;
+    }
+
+    .quote-section {
+      text-align: center;
+      padding: 60px 20px;
+      background: #f9f9f9;
+    }
+
+    .quote-text {
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      font-style: italic;
+      color: #333;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* =========================================
+       SEÇÃO 2: ÁREA DE COMPRA (Modificada)
+       ========================================= */
+
+    .conversion-anchor {
+      margin-top: 40px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      max-width: 1100px;
+      margin: 50px auto;
+      gap: 50px;
+      padding: 0 20px;
+    }
+
+    /* Galeria de Fotos (COLUNA ESQUERDA) */
+    .product-gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      /* Reduzido o gap */
+    }
+
+    .main-img-box {
+      background: #f4f4f4;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    /* Novo container para as fotos LADO A LADO */
+    .product-thumbs-row {
+      display: flex;
+      gap: 10px;
+      /* Garante que o container de fotos menores ocupe toda a largura da coluna */
+    }
+
+    .product-thumbs-row .main-img-box {
+      width: 50%;
+      /* Cada imagem ocupa metade do espaço */
+      padding: 10px;
+      /* Padding menor para caber */
+      cursor: pointer;
+      transition: border 0.2s;
+      border: 1px solid transparent;
+    }
+
+    .product-thumbs-row .main-img-box:hover {
+      border: 1px solid var(--pandora-pink);
+    }
+
+    .discount-badge {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: var(--pandora-pink);
+      border-radius: 50%;
+      width: 55px;
+      height: 55px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      font-weight: bold;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      z-index: 2;
+    }
+
+    /* Informações de Compra */
+    .product-info h2 {
+      font-size: 1.8rem;
+      margin-bottom: 5px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .sku {
+      font-size: 0.8rem;
+      color: #999;
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .price-box {
+      margin-bottom: 25px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 20px;
+    }
+
+    .de {
+      text-decoration: line-through;
+      color: #999;
+      font-size: 0.9rem;
+      margin-right: 10px;
+    }
+
+    .por {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #000;
+    }
+
+    .bonus {
+      color: #e91e63;
+      font-size: 0.9rem;
+      font-weight: bold;
+      margin-top: 5px;
+    }
+
+    /* Botões */
+    .cta-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 18px;
+      border: none;
+      cursor: pointer;
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 1px;
+      font-size: 0.9rem;
+    }
+
+    .btn-black {
+      background: #222;
+      color: #fff;
+    }
+
+    .btn-black:hover {
+      opacity: 0.9;
+    }
+
+    .btn-pink {
+      background: var(--pandora-pink);
+      color: #222;
+    }
+
+    .btn-pink:hover {
+      filter: brightness(0.95);
+    }
+
+    /* Garantias com Ícones */
+    .benefits-list {
+      margin-top: 30px;
+      background: #fafafa;
+      padding: 20px;
+      border-radius: 4px;
+    }
+
+    .benefit-item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 15px;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .benefit-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .icon-small {
+      width: 30px;
+      height: 30px;
+      object-fit: contain;
+    }
+
+    /* Footer */
+    footer {
+      background: #111;
+      color: #777;
+      padding: 40px;
+      text-align: center;
+      font-size: 0.8rem;
+      margin-top: 60px;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    /* Mobile */
+    @media(max-width: 768px) {
+      .product-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-title {
+        font-size: 2.2rem;
+      }
+
+      /* Garante que as fotos também fiquem em coluna no mobile */
+      .product-thumbs-row {
+        flex-direction: column;
+      }
+
+      .product-thumbs-row .main-img-box {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="top-bar">
+    <img src="img/logo_pandora.png" class="logo-img" alt="Pandora Logo">
+    <div class="sub-nav">
+      <span>Joias</span> • <span>Presentes</span> • <span>Coleções</span>
+    </div>
+  </header>
+
+  <section class="editorial-hero">
+    <img src="img/PANCARD.png" alt="Pulseira Pandora Lifestyle">
+
+    <div class="hero-overlay">
+      <h1 class="hero-title">Elegância em <br>Cada Detalhe</h1>
+      <p class="hero-text">Transforme momentos em memórias inesquecíveis com a nova coleção.</p>
+      <button class="btn-editorial"
+        onclick="document.getElementById('compra').scrollIntoView({behavior: 'smooth'})">Descobrir Agora</button>
+    </div>
+  </section>
+
+  <section class="quote-section">
+    <p class="quote-text">
+      "Uma peça única que define sofisticação. O presente perfeito para quem você ama."
+    </p>
+  </section>
+
+  <div id="compra" class="conversion-anchor"></div>
+
+  <section class="product-grid">
+
+    <div class="product-gallery">
+
+      <div class="main-img-box">
+        <div class="discount-badge">50%<br>OFF</div>
+        <img src="img/pan2.png" alt="Pulseira Pandora Isolada">
+      </div>
+
+      <div class="product-thumbs-row">
+        <div class="main-img-box">
+          <img src="img/pan 1.png" alt="Miniatura da Pulseira 2">
+        </div>
+        <div class="main-img-box">
+          <img src="img/foto_pulseira_2.png" alt="Miniatura da Pulseira 12">
+        </div>
+      </div>
+
+    </div>
+
+    <div class="product-info">
+      <span class="sku">REF: 590702HV</span>
+      <h2>Pulseira Pandora Elegance</h2>
+
+      <div class="price-box">
+        <div>
+          <span class="de">R$ 299,99</span>
+          <span class="por">R$ 149,99</span>
+        </div>
+        <p class="bonus">GANHE 10 BERLOQUES EXCLUSIVOS + FRETE GRÁTIS!</p>
+        <p style="font-size: 0.9rem; color: #555; margin-top:5px;"></p>
+      </div>
+
+      <div class="cta-buttons">
+        <button class="btn btn-pink" onclick="window.location.href='https://pay.kirvano.com/efb969c8-7593-49dc-aafc-feb4ba6083ae'">
+          COMPRAR AGORA
+        </button>
+      </div>
+
+      <div style="font-size: 0.8rem; color:#666; display:flex; justify-content:space-between; margin-bottom:20px;">
+    
+      </div>
+
+      <div class="benefits-list">
+        <h3>Vantagens de Comprar na Pandora</h3>
+        <div class="benefit-item">
+          <span>💲 Pagamento 100% Seguro</span>
+        </div>
+        <div class="benefit-item">
+          <span> ⟲ Primeira troca grátis e facilitada</span>
+        </div>
+        <div class="benefit-item">
+          <span> ◉ Envio Rápido para todo o Brasil</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>Dúvidas? Fale conosco: <a href="mailto:contato@pandora.com">contato@pandora.com</a></p>
+    <br>
+    <p>© 2025 Pandora Jewelry. Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+
+</html>
