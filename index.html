@@ -5,53 +5,22 @@
   <!-- TikTok Pixel Code Start -->
   <script>
     !function (w, d, t) {
-      w.TiktokAnalyticsObject = t;
-      var ttq = w[t] = w[t] || [];
-      ttq.methods = [
-        "page", "track", "identify", "instances", "debug", "on",
-        "off", "once", "ready", "alias", "group",
-        "enableCookie", "disableCookie", "holdConsent",
-        "revokeConsent", "grantConsent"
-      ];
-      ttq.setAndDefer = function (t, e) {
-        t[e] = function () {
-          t.push([e].concat(Array.prototype.slice.call(arguments, 0)));
-        }
+      w.TiktokAnalyticsObject = t; var ttq = w[t] = w[t] || []; ttq.methods = ["page", "track", "identify", "instances", "debug", "on", "off", "once", "ready", "alias", "group", "enableCookie", "disableCookie", "holdConsent", "revokeConsent", "grantConsent"], ttq.setAndDefer = function (t, e) { t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))) } }; for (var i = 0; i < ttq.methods.length; i++)ttq.setAndDefer(ttq, ttq.methods[i]); ttq.instance = function (t) {
+        for (
+          var e = ttq._i[t] || [], n = 0; n < ttq.methods.length; n++)ttq.setAndDefer(e, ttq.methods[n]); return e
+      }, ttq.load = function (e, n) {
+        var r = "https://analytics.tiktok.com/i18n/pixel/events.js", o = n && n.partner; ttq._i = ttq._i || {}, ttq._i[e] = [], ttq._i[e]._u = r, ttq._t = ttq._t || {}, ttq._t[e] = +new Date, ttq._o = ttq._o || {}, ttq._o[e] = n || {}; n = document.createElement("script")
+          ; n.type = "text/javascript", n.async = !0, n.src = r + "?sdkid=" + e + "&lib=" + t; e = document.getElementsByTagName("script")[0]; e.parentNode.insertBefore(n, e)
       };
-      for (var i = 0; i < ttq.methods.length; i++) {
-        ttq.setAndDefer(ttq, ttq.methods[i]);
-      }
-      ttq.instance = function (t) {
-        var e = ttq._i[t] || [];
-        for (var n = 0; n < ttq.methods.length; n++) {
-          ttq.setAndDefer(e, ttq.methods[n]);
-        }
-        return e;
-      };
-      ttq.load = function (e, n) {
-        var r = "https://analytics.tiktok.com/i18n/pixel/events.js";
-        ttq._i = ttq._i || {};
-        ttq._i[e] = [];
-        ttq._i[e]._u = r;
-        ttq._t = ttq._t || {};
-        ttq._t[e] = +new Date;
-        ttq._o = ttq._o || {};
-        ttq._o[e] = n || {};
-        var o = document.createElement("script");
-        o.type = "text/javascript";
-        o.async = !0;
-        o.src = r + "?sdkid=" + e + "&lib=" + t;
-        var a = document.getElementsByTagName("script")[0];
-        a.parentNode.insertBefore(o, a);
-      };
+
 
       ttq.load('CGVLKMJC77UF875GNTIG');
       ttq.page();
     }(window, document, 'ttq');
   </script>
   <!-- TikTok Pixel Code End -->
-  
-  <!-- Google Tag -->
+  <!-- TikTok Pixel Code End -->
+  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-836230856"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -60,17 +29,343 @@
     gtag('config', 'AW-836230856');
   </script>
 
-  <!-- META / HEAD CONTENT -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pandora | Pulseira Elegance</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Roboto:wght@300;400;700&display=swap"
+    rel="stylesheet">
 
   <style>
-    /* (todo o seu CSS permanece igual — não alterei nada) */
+    /* RESET */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary-black: #111;
+      --pandora-pink: #ffcce0;
+      --font-serif: 'Playfair Display', serif;
+      --font-sans: 'Roboto', sans-serif;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      color: var(--primary-black);
+      background-color: #fff;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* TOPO */
+    .top-bar {
+      background-color: var(--primary-black);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 15px 0;
+    }
+
+    .logo-img {
+      height: 40px;
+      filter: invert(1);
+      margin-bottom: 10px;
+    }
+
+    .sub-nav {
+      font-size: 0.75rem;
+      color: #ccc;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .sub-nav span {
+      margin: 0 10px;
+    }
+
+    /* HERO */
+    .editorial-hero {
+      position: relative;
+      width: 100%;
+      height: 80vh;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #000;
+    }
+
+    .editorial-hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.8;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      text-align: center;
+      color: #fff;
+      width: 90%;
+    }
+
+    .hero-title {
+      font-family: var(--font-serif);
+      font-size: 3rem;
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+
+    .hero-text {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+    }
+
+    .btn-editorial {
+      border: 1px solid #fff;
+      padding: 15px 40px;
+      letter-spacing: 2px;
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    /* FRASE */
+    .quote-section {
+      text-align: center;
+      padding: 60px 20px;
+      background: #f9f9f9;
+    }
+
+    .quote-text {
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      font-style: italic;
+    }
+
+    /* CARD PRODUTO */
+    .product-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      max-width: 1100px;
+      margin: 50px auto;
+      gap: 50px;
+      padding: 0 20px;
+    }
+
+    .product-gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .main-img-box {
+      background: #f4f4f4;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      border-radius: 6px;
+    }
+
+    #main-product-img {
+      transition: opacity 0.3s ease;
+    }
+
+    .product-thumbs-row {
+      display: flex;
+      gap: 10px;
+    }
+
+    .thumb img {
+      cursor: pointer;
+      border-radius: 5px;
+      transition: 0.25s;
+    }
+
+    .thumb img:hover {
+      transform: scale(1.05);
+      border: 2px solid var(--pandora-pink);
+    }
+
+    .discount-badge {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: var(--pandora-pink);
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 0.85rem;
+    }
+
+    .product-info h2 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+
+    .price-box {
+      margin-bottom: 20px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 20px;
+    }
+
+    .de {
+      text-decoration: line-through;
+      color: #777;
+      margin-right: 10px;
+    }
+
+    .por {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    .bonus {
+      color: #e91e63;
+      font-weight: bold;
+      margin-top: 5px;
+    }
+
+    .cta-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .btn-pink {
+      background: var(--pandora-pink);
+      padding: 18px;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .btn-pink:hover {
+      filter: brightness(0.95);
+    }
+
+    /* COMENTÁRIOS */
+    .reviews-section {
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .reviews-title {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 30px;
+      font-family: var(--font-serif);
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+    }
+
+    .review-card {
+      background: #fafafa;
+      padding: 15px;
+      border-radius: 6px;
+      text-align: center;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .review-photo {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #111;
+      color: #777;
+      padding: 40px;
+      text-align: center;
+    }
+
+    /* ============================================
+       RESPONSIVIDADE MOBILE
+       ============================================ */
+    @media(max-width: 768px) {
+
+      .product-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .main-img-box {
+        padding: 10px;
+      }
+
+      #main-product-img {
+        width: 100%;
+        height: auto;
+      }
+
+      .product-thumbs-row {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 10px;
+        padding-bottom: 10px;
+      }
+
+      .product-thumbs-row .main-img-box {
+        min-width: 110px;
+        max-width: 110px;
+      }
+
+      .product-info {
+        text-align: center;
+      }
+
+      .price-box {
+        text-align: center;
+      }
+
+      .hero-title {
+        font-size: 2rem;
+      }
+
+      .reviews-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .review-photo {
+        height: 140px;
+      }
+    }
+
+    @media(max-width: 480px) {
+      .reviews-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .product-thumbs-row .main-img-box {
+        min-width: 90px;
+        max-width: 90px;
+      }
+    }
   </style>
 </head>
 
@@ -89,9 +384,7 @@
       <h1 class="hero-title">Elegância em<br>Cada Detalhe</h1>
       <p class="hero-text">Transforme momentos em memórias inesquecíveis.</p>
       <button class="btn-editorial"
-        onclick="document.getElementById('compra').scrollIntoView({behavior:'smooth'})">
-        Descobrir Agora
-      </button>
+        onclick="document.getElementById('compra').scrollIntoView({behavior:'smooth'})">Descobrir Agora</button>
     </div>
   </section>
 
@@ -105,21 +398,29 @@
   <section class="product-grid">
 
     <div class="product-gallery">
+
       <div class="main-img-box">
         <div class="discount-badge">50%<br>OFF</div>
         <img id="main-product-img" src="img/pan2.png" alt="Pulseira Pandora Isolada">
       </div>
 
       <div class="product-thumbs-row">
-        <div class="main-img-box thumb"><img src="img/pan 1.png"></div>
-        <div class="main-img-box thumb"><img src="img/IMG_0363.jpg"></div>
-        <div class="main-img-box thumb"><img src="img/IMG_0364.jpg"></div>
-        <div class="main-img-box thumb"><img src="img/IMG_0365.jpg"></div>
+        <div class="main-img-box thumb">
+          <img src="img/pan 1.png">
+        </div>
+        <div class="main-img-box thumb">
+          <img src="img/IMG_0363.jpg">
+        </div>
+        <div class="main-img-box thumb">
+          <img src="img/IMG_0364.jpg">
+        </div>
+        <div class="main-img-box thumb">
+          <img src="img/IMG_0365.jpg">
+        </div>
       </div>
     </div>
 
     <div class="product-info">
-
       <h2>Pulseira Pandora Elegance</h2>
 
       <div class="price-box">
@@ -130,11 +431,9 @@
 
       <div class="cta-buttons">
         <button class="btn btn-pink"
-          onclick="handleBuyClick()">
-          Comprar Agora
-        </button>
+          onclick="window.location.href='https://pay.kirvano.com/efb969c8-7593-49dc-aafc-feb4ba6083ae'">Comprar
+          Agora</button>
       </div>
-
     </div>
   </section>
 
@@ -143,7 +442,46 @@
     <h2 class="reviews-title">Avaliações dos Clientes</h2>
 
     <div class="reviews-grid">
-      <!-- (seus cards intactos) -->
+      <div class="review-card"><img src="img/IMG_0363.jpg" class="review-photo">
+        <h3>Amanda</h3>
+        <p>Amei!</p>
+      </div>
+      <div class="review-card"><img src="img/IMG_0364.jpg" class="review-photo">
+        <h3>Mariana</h3>
+        <p>Perfeita!</p>
+      </div>
+      <div class="review-card"><img src="img/IMG_0365.jpg" class="review-photo">
+        <h3>Fernanda</h3>
+        <p>Lindíssima!</p>
+      </div>
+      <div class="review-card"><img src="img/IMG_0375.jpg" class="review-photo">
+        <h3>Juliana</h3>
+        <p>Aprovada!</p>
+      </div>
+      <div class="review-card"><img src="img/IMG_0376.jpg" class="review-photo">
+        <h3>Larissa</h3>
+        <p>Magnífica!</p>
+      </div>
+      <div class="review-card"><img src="img/IMG_0377.jpg" class="review-photo">
+        <h3>Isabela</h3>
+        <p>Show!</p>
+      </div>
+      <div class="review-card"><img src="img/IMG_0368.jpg" class="review-photo">
+        <h3>Patrícia</h3>
+        <p>Top!</p>
+      </div>
+      <div class="review-card"><img src="img/IMG_0369.jpg" class="review-photo">
+        <h3>Rebeca</h3>
+        <p>Amei!</p>
+      </div>
+      <div class="review-card"><img src="img/IMG_0370.jpg" class="review-photo">
+        <h3>Carolina</h3>
+        <p>Lindo!</p>
+      </div>
+      <div class="review-card"><img src="img/IMG_0371.jpg" class="review-photo">
+        <h3>Natália</h3>
+        <p>Perfeito!</p>
+      </div>
     </div>
   </section>
 
@@ -151,11 +489,11 @@
     <p>Dúvidas? Email: contato@pandora.com</p>
   </footer>
 
-  <!-- SCRIPTS FINAIS -->
+  <!-- TROCA DE IMAGEM -->
   <script>
-    /* Troca de imagem */
     const mainImage = document.getElementById('main-product-img');
     const thumbs = document.querySelectorAll('.thumb img');
+
     thumbs.forEach(img => {
       img.addEventListener('click', () => {
         mainImage.style.opacity = 0;
@@ -165,51 +503,8 @@
         }, 200);
       });
     });
-
-    /* TIKTOK — Identify (PII hash via SHA-256 se quiser depois) */
-    ttq.identify({
-      email: "<hashed_email_address>",
-      phone_number: "<hashed_phone_number>",
-      external_id: "<hashed_external_id>"
-    });
-
-    /* ViewContent automático ao carregar página */
-    ttq.track('ViewContent', {
-      contents: [{
-        content_id: "PANDORA-ELEGANCE",
-        content_type: "product",
-        content_name: "Pulseira Pandora Elegance"
-      }],
-      value: 149.99,
-      currency: "BRL"
-    });
-
-    /* Botão Comprar — AddToCart + InitiateCheckout */
-    function handleBuyClick() {
-
-      ttq.track('AddToCart', {
-        contents: [{
-          content_id: "PANDORA-ELEGANCE",
-          content_type: "product",
-          content_name: "Pulseira Pandora Elegance"
-        }],
-        value: 149.99,
-        currency: "BRL"
-      });
-
-      ttq.track('InitiateCheckout', {
-        contents: [{
-          content_id: "PANDORA-ELEGANCE",
-          content_type: "product",
-          content_name: "Pulseira Pandora Elegance"
-        }],
-        value: 149.99,
-        currency: "BRL"
-      });
-
-      window.location.href = "https://pay.kirvano.com/efb969c8-7593-49dc-aafc-feb4ba6083ae";
-    }
   </script>
 
 </body>
+
 </html>
