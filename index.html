@@ -2,7 +2,15 @@
 <html lang="pt-BR">
 
 <head>
-  
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-836230856"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'AW-836230856');
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pandora | Pulseira Elegance</title>
@@ -20,38 +28,38 @@
       padding: 0;
       box-sizing: border-box;
     }
-
+  
     :root {
       --primary-black: #111;
       --pandora-pink: #ffcce0;
       --font-serif: 'Playfair Display', serif;
       --font-sans: 'Roboto', sans-serif;
     }
-
+  
     body {
       font-family: var(--font-sans);
       color: var(--primary-black);
       background-color: #fff;
     }
-
+  
     img {
       max-width: 100%;
       display: block;
     }
-
+  
     a {
       text-decoration: none;
       color: inherit;
     }
-
+  
     ul {
       list-style: none;
     }
-
-    /* =========================================
-       SEÇÃO 1: TOPO EDITORIAL
-       ========================================= */
-
+  
+  
+    /* ========================
+     SEÇÃO HERO E TOPO
+  ======================== */
     .top-bar {
       background-color: var(--primary-black);
       color: #fff;
@@ -60,67 +68,56 @@
       align-items: center;
       padding: 15px 0;
     }
-
+  
     .logo-img {
       height: 40px;
       width: auto;
       margin-bottom: 10px;
       filter: invert(1);
     }
-
+  
     .sub-nav {
       font-size: 0.75rem;
       color: #ccc;
       letter-spacing: 2px;
       text-transform: uppercase;
     }
-
+  
     .sub-nav span {
       margin: 0 10px;
       cursor: pointer;
     }
-
-    /* CONTAINER PRINCIPAL */
-.editorial-hero {
-  position: relative;
-  width: 100%;
-  height: 80vh; 
-  overflow: hidden;
-  background: #000;
-  /* NOVO: Centraliza o conteúdo se houver mais de um item no hero */
-  display: flex; 
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: center; /* Centraliza verticalmente */
-}
-
-/* IMAGEM */
-.editorial-hero img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; 
-  opacity: 0.8;
-  /* Garantindo que o ponto focal da imagem esteja no centro */
-  object-position: center; 
-}
-
-/* TEXTO DE SOBREPOSIÇÃO */
-.hero-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  /* ALTERADO: Usa o translate para centralização precisa */
-  transform: translate(-50%, -50%); 
-  text-align: center; /* Centraliza o texto dentro do overlay */
-  color: #fff;
-  width: 90%;
-  max-width: 600px;
-}
-    
-
-    
-
-    
-
+  
+    .editorial-hero {
+      position: relative;
+      width: 100%;
+      height: 80vh;
+      overflow: hidden;
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .editorial-hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.8;
+      object-position: center;
+    }
+  
+    .hero-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: #fff;
+      width: 90%;
+      max-width: 600px;
+    }
+  
     .hero-title {
       font-family: var(--font-serif);
       font-size: 3rem;
@@ -128,13 +125,17 @@
       margin-bottom: 20px;
       font-style: italic;
     }
-
+  
     .hero-text {
       font-size: 1.1rem;
       margin-bottom: 30px;
       font-weight: 300;
     }
-
+  
+  
+    /* ========================
+     BOTÃO HERO
+  ======================== */
     .btn-editorial {
       border: 1px solid #fff;
       background: rgba(255, 255, 255, 0.1);
@@ -147,18 +148,18 @@
       transition: 0.3s;
       backdrop-filter: blur(5px);
     }
-
+  
     .btn-editorial:hover {
       background: #fff;
       color: #000;
     }
-
+  
     .quote-section {
       text-align: center;
       padding: 60px 20px;
       background: #f9f9f9;
     }
-
+  
     .quote-text {
       font-family: var(--font-serif);
       font-size: 1.6rem;
@@ -167,15 +168,13 @@
       max-width: 700px;
       margin: 0 auto;
     }
-
-    /* =========================================
-       SEÇÃO 2: ÁREA DE COMPRA (Modificada)
-       ========================================= */
-
-    .conversion-anchor {
-      margin-top: 40px;
-    }
-
+  
+  
+  
+    /* ==========================
+     CARD DO PRODUTO (MODIFICADO)
+  ========================== */
+  
     .product-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -184,15 +183,13 @@
       gap: 50px;
       padding: 0 20px;
     }
-
-    /* Galeria de Fotos (COLUNA ESQUERDA) */
+  
     .product-gallery {
       display: flex;
       flex-direction: column;
       gap: 10px;
-      /* Reduzido o gap */
     }
-
+  
     .main-img-box {
       background: #f4f4f4;
       padding: 20px;
@@ -201,28 +198,27 @@
       justify-content: center;
       position: relative;
     }
-
-    /* Novo container para as fotos LADO A LADO */
+  
+    #main-product-img {
+      transition: opacity 0.3s ease;
+    }
+  
     .product-thumbs-row {
       display: flex;
       gap: 10px;
-      /* Garante que o container de fotos menores ocupe toda a largura da coluna */
     }
-
-    .product-thumbs-row .main-img-box {
-      width: 50%;
-      /* Cada imagem ocupa metade do espaço */
-      padding: 10px;
-      /* Padding menor para caber */
+  
+    .thumb img {
       cursor: pointer;
-      transition: border 0.2s;
-      border: 1px solid transparent;
+      transition: transform 0.25s, border 0.25s;
+      border-radius: 4px;
     }
-
-    .product-thumbs-row .main-img-box:hover {
-      border: 1px solid var(--pandora-pink);
+  
+    .thumb img:hover {
+      transform: scale(1.05);
+      border: 2px solid var(--pandora-pink);
     }
-
+  
     .discount-badge {
       position: absolute;
       top: 20px;
@@ -239,7 +235,6 @@
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       z-index: 2;
     }
-
     /* Informações de Compra */
     .product-info h2 {
       font-size: 1.8rem;
@@ -280,72 +275,73 @@
       font-weight: bold;
       margin-top: 5px;
     }
-
-    /* Botões */
+  
+    /* ==========================
+     INFO PRODUTO
+  ========================== */
+  
     .cta-buttons {
       display: flex;
       flex-direction: column;
       gap: 15px;
       margin-bottom: 30px;
     }
-
-    .btn {
-      width: 100%;
-      padding: 18px;
-      border: none;
-      cursor: pointer;
-      text-transform: uppercase;
-      font-weight: bold;
-      letter-spacing: 1px;
-      font-size: 0.9rem;
-    }
-
-    .btn-black {
-      background: #222;
-      color: #fff;
-    }
-
-    .btn-black:hover {
-      opacity: 0.9;
-    }
-
+  
     .btn-pink {
       background: var(--pandora-pink);
       color: #222;
+      padding: 18px;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
     }
-
+  
     .btn-pink:hover {
       filter: brightness(0.95);
     }
-
-    /* Garantias com Ícones */
-    .benefits-list {
-      margin-top: 30px;
+  
+  
+    /* ==========================
+     SEÇÃO COMENTÁRIOS — OK
+  ========================== */
+  
+    .reviews-section {
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+  
+    .reviews-title {
+      text-align: center;
+      font-size: 2rem;
+      font-family: var(--font-serif);
+      margin-bottom: 30px;
+    }
+  
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+    }
+  
+    .review-card {
       background: #fafafa;
-      padding: 20px;
-      border-radius: 4px;
+      padding: 15px;
+      border-radius: 6px;
+      text-align: center;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
     }
-
-    .benefit-item {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      margin-bottom: 15px;
-      font-size: 0.9rem;
-      color: #555;
+  
+    .review-photo {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 6px;
     }
-
-    .benefit-item:last-child {
-      margin-bottom: 0;
-    }
-
-    .icon-small {
-      width: 30px;
-      height: 30px;
-      object-fit: contain;
-    }
-
-    /* Footer */
+  
+  
+    /* FOOTER */
     footer {
       background: #111;
       color: #777;
@@ -354,138 +350,167 @@
       font-size: 0.8rem;
       margin-top: 60px;
     }
-
-    footer a {
-      color: #fff;
-      text-decoration: underline;
-    }
-
-    /* Mobile */
-    @media(max-width: 768px) {
-      .product-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-title {
-        font-size: 2.2rem;
-      }
-
-      /* Garante que as fotos também fiquem em coluna no mobile */
-      .product-thumbs-row {
-        flex-direction: column;
-      }
-
-      .product-thumbs-row .main-img-box {
-        width: 100%;
-      }
-    }
   </style>
-</head>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-836230856"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-836230856');
-</script>
-  <!-- Event snippet for Website sale conversion page --> 
-  <script> 
-    gtag('event', 'conversion', { 'send_to': 'AW-836230856/l5p3CKWO1I0CEMi9344D', 'transaction_id': '' }); 
-  </script>
-<body>
-
-  <header class="top-bar">
-    <img src="img/logo_pandora.png" class="logo-img" alt="Pandora Logo">
-    <div class="sub-nav">
-      <span>Joias</span> • <span>Presentes</span> • <span>Coleções</span>
-    </div>
-  </header>
-
-  <section class="editorial-hero">
-    <img src="img/PANCARD.png" alt="Pulseira Pandora Lifestyle">
-
-    <div class="hero-overlay">
-      <h1 class="hero-title">Elegância em <br>Cada Detalhe</h1>
-      <p class="hero-text">Transforme momentos em memórias inesquecíveis com a nova coleção.</p>
-      <button class="btn-editorial"
-        onclick="document.getElementById('compra').scrollIntoView({behavior: 'smooth'})">Descobrir Agora</button>
-    </div>
-  </section>
-
-  <section class="quote-section">
-    <p class="quote-text">
-      "Uma peça única que define sofisticação. O presente perfeito para quem você ama."
-    </p>
-  </section>
-
-  <div id="compra" class="conversion-anchor"></div>
-
-  <section class="product-grid">
-
-    <div class="product-gallery">
-
-      <div class="main-img-box">
-        <div class="discount-badge">50%<br>OFF</div>
-        <img src="img/pan2.png" alt="Pulseira Pandora Isolada">
+  </head>
+  
+  <body>
+  
+    <header class="top-bar">
+      <img src="img/logo_pandora.png" class="logo-img">
+      <div class="sub-nav">
+        <span>Joias</span> • <span>Presentes</span> • <span>Coleções</span>
       </div>
-
-      <div class="product-thumbs-row">
-        <div class="main-img-box">
-          <img src="img/pan 1.png" alt="Miniatura da Pulseira 2">
-        </div>
-        <div class="main-img-box">
-          <img src="img/foto_pulseira_2.png" alt="Miniatura da Pulseira 12">
-        </div>
+    </header>
+  
+  
+    <section class="editorial-hero">
+      <img src="img/PANCARD.png">
+  
+      <div class="hero-overlay">
+        <h1 class="hero-title">Elegância em<br>Cada Detalhe</h1>
+        <p class="hero-text">Transforme momentos em memórias inesquecíveis.</p>
+        <button class="btn-editorial"
+          onclick="document.getElementById('compra').scrollIntoView({behavior:'smooth'})">Descobrir Agora</button>
       </div>
-
-    </div>
-
-    <div class="product-info">
-      <span class="sku">REF: 590702HV</span>
-      <h2>Pulseira Pandora Elegance</h2>
-
-      <div class="price-box">
-        <div>
+    </section>
+  
+  
+    <section class="quote-section">
+      <p class="quote-text">"Uma peça única que define sofisticação."</p>
+    </section>
+  
+  
+    <div id="compra" class="conversion-anchor"></div>
+  
+  
+    <!-- ==========================
+       CARD DO PRODUTO MODIFICADO
+  ========================== -->
+    <section class="product-grid">
+  
+      <div class="product-gallery">
+  
+        <div class="main-img-box">
+          <div class="discount-badge">50%<br>OFF</div>
+          <img id="main-product-img" src="img/pan2.png" alt="Pulseira Pandora Isolada">
+        </div>
+  
+        <div class="product-thumbs-row">
+          <div class="main-img-box thumb">
+            <img src="img/pan 1.png">
+          </div>
+          <div class="main-img-box thumb">
+            <img src="img/IMG_0363.jpg">
+          </div>
+          <div class="main-img-box thumb">
+            <img src="img/IMG_0364.jpg">
+          </div>
+          <div class="main-img-box thumb">
+            <img src="img/IMG_0365.jpg">
+          </div>
+        </div>
+  
+      </div>
+  
+      <div class="product-info">
+        <h2>Pulseira Pandora Elegance</h2>
+  
+        <div class="price-box">
           <span class="de">R$ 299,99</span>
           <span class="por">R$ 149,99</span>
+          <p class="bonus">GANHE BERLOQUES EXCLUSIVOS + FRETE GRÁTIS!</p>
         </div>
-        <p class="bonus">GANHE 10 BERLOQUES EXCLUSIVOS + FRETE GRÁTIS!</p>
-        <p style="font-size: 0.9rem; color: #555; margin-top:5px;"></p>
-      </div>
-
-      <div class="cta-buttons">
-        <button class="btn btn-pink" onclick="window.location.href='https://pay.kirvano.com/efb969c8-7593-49dc-aafc-feb4ba6083ae'">
-          COMPRAR AGORA
-        </button>
-      </div>
-
-      <div style="font-size: 0.8rem; color:#666; display:flex; justify-content:space-between; margin-bottom:20px;">
-    
-      </div>
-
-      <div class="benefits-list">
-        <h3>Vantagens de Comprar na Pandora</h3>
-        <div class="benefit-item">
-          <span>💲 Pagamento 100% Seguro</span>
+  
+        <div class="cta-buttons">
+          <button class="btn btn-pink"
+            onclick="window.location.href='https://pay.kirvano.com/efb969c8-7593-49dc-aafc-feb4ba6083ae'">Comprar
+            Agora</button>
         </div>
-        <div class="benefit-item">
-          <span> ⟲ Primeira troca grátis e facilitada</span>
+  
+      </div>
+    </section>
+  
+  
+  
+    <!-- ==========================
+       SEÇÃO COMENTÁRIOS — OK
+  ========================== -->
+  
+    <section class="reviews-section">
+      <h2 class="reviews-title">Avaliações Nossos Clientes ! </h2>
+  
+      <div class="reviews-grid">
+        <div class="review-card"><img src="img/IMG_0363.jpg" class="review-photo">
+          <h3>Amanda</h3>
+          <p>Amei!</p>
         </div>
-        <div class="benefit-item">
-          <span> ◉ Envio Rápido para todo o Brasil</span>
+        <div class="review-card"><img src="img/IMG_0364.jpg" class="review-photo">
+          <h3>Mariana</h3>
+          <p>Perfeita!</p>
+        </div>
+        <div class="review-card"><img src="img/IMG_0365.jpg" class="review-photo">
+          <h3>Fernanda</h3>
+          <p>Lindíssima!</p>
+        </div>
+        <div class="review-card"><img src="img/IMG_0375.jpg" class="review-photo">
+          <h3>Juliana</h3>
+          <p>Aprovada!</p>
+        </div>
+        <div class="review-card"><img src="img/IMG_0376.jpg" class="review-photo">
+          <h3>Larissa</h3>
+          <p>Magnífica!</p>
+        </div>
+  
+        <div class="review-card"><img src="img/IMG_0377.jpg" class="review-photo">
+          <h3>Isabela</h3>
+          <p>Show!</p>
+        </div>
+        <div class="review-card"><img src="img/IMG_0368.jpg" class="review-photo">
+          <h3>Patrícia</h3>
+          <p>Top!</p>
+        </div>
+        <div class="review-card"><img src="img/IMG_0369.jpg" class="review-photo">
+          <h3>Rebeca</h3>
+          <p>Amei!</p>
+        </div>
+        <div class="review-card"><img src="img/IMG_0370.jpg" class="review-photo">
+          <h3>Carolina</h3>
+          <p>Lindo!</p>
+        </div>
+        <div class="review-card"><img src="img/IMG_0371.jpg" class="review-photo">
+          <h3>Natália</h3>
+          <p>Perfeito!</p>
         </div>
       </div>
+    </section>
+  
+  
+    <footer>
+      <p>Dúvidas? Email: contato@pandora.com</p>
+    </footer>
+  
+  
+  
+  
+    <!-- ==========================
+       SCRIPT DE TROCA DE IMAGEM
+  ========================== -->
+    <script>
+      const mainImage = document.getElementById('main-product-img');
+      const thumbs = document.querySelectorAll('.thumb img');
 
-    </div>
-  </section>
+      thumbs.forEach(img => {
+        img.addEventListener('click', () => {
+          mainImage.style.opacity = 0;
 
-  <footer class="footer">
-    <p>Dúvidas? Fale conosco: <a href="mailto:contato@pandora.com">contato@pandora.com</a></p>
-    <br>
-    <p>© 2025 Pandora Jewelry. Todos os direitos reservados.</p>
-  </footer>
-
-</body>
-
-</html>
+          setTimeout(() => {
+            mainImage.src = img.src;
+            mainImage.style.opacity = 1;
+          }, 200);
+        });
+      });
+    </script>
+  
+  </body>
+  
+  </html>
